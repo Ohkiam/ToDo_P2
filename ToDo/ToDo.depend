@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1565265102 source:e:\codeblocks_repo\todo_p2\todo\main.cpp
+	<stdio.h>
+	"header.hpp"
+	<stdio.h>
+	"header.hpp"
+
+1564991715 source:e:\codeblocks_repo\todo_p2\todo\funktionen.cpp
+	<stdio.h>
+	"header.hpp"
+
+1565269803 e:\codeblocks_repo\todo_p2\todo\header.hpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstring>
+	<cstdio>
+	<fstream>
+
+1565270093 source:e:\codeblocks_repo\todo_p2\todo\cl_todo.cpp
+	<stdio.h>
+	"CL_todo.hpp"
+
+1565270448 e:\codeblocks_repo\todo_p2\todo\cl_todo.hpp
+
+1565268410 source:e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.cpp
+	<stdio.h>
+	"CL_aufgabe.hpp"
+
+1565269373 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
+	"CL_todo.hpp"
+
+1565268483 source:e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.cpp
+	<stdio.h>
+	"CL_schlagwort.hpp"
+
+1565269354 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
+	"CL_todo.hpp"
+
