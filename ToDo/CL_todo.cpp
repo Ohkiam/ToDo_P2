@@ -6,10 +6,15 @@
 
 CL_todo::CL_todo()     /// konstruktor
 {
-    int a = 10;
+
 }
 CL_todo::~CL_todo()
 {
 
 }
 
+void CL_todo::echo(int a)
+{
+    a = 10;
+    std::cout << a << std::endl;
+}

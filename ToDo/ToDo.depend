@@ -5,11 +5,14 @@
 	<stdio.h>
 	"header.hpp"
 
-1564991715 source:e:\codeblocks_repo\todo_p2\todo\funktionen.cpp
+1565340848 source:e:\codeblocks_repo\todo_p2\todo\funktionen.cpp
+	"CL_schlagwort.hpp"
+	"CL_aufgabe.hpp"
 	<stdio.h>
 	"header.hpp"
+	"CL_todo.hpp"
 
-1565269803 e:\codeblocks_repo\todo_p2\todo\header.hpp
+1565334395 e:\codeblocks_repo\todo_p2\todo\header.hpp
 	<iostream>
 	<string>
 	<cstdlib>
@@ -17,23 +20,24 @@
 	<cstdio>
 	<fstream>
 
-1565270093 source:e:\codeblocks_repo\todo_p2\todo\cl_todo.cpp
+1565336422 source:e:\codeblocks_repo\todo_p2\todo\cl_todo.cpp
 	<stdio.h>
 	"CL_todo.hpp"
 
-1565270448 e:\codeblocks_repo\todo_p2\todo\cl_todo.hpp
+1565336534 e:\codeblocks_repo\todo_p2\todo\cl_todo.hpp
+	<iostream>
 
 1565268410 source:e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.cpp
 	<stdio.h>
 	"CL_aufgabe.hpp"
 
-1565269373 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
+1565338603 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
 	"CL_todo.hpp"
 
 1565268483 source:e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.cpp
 	<stdio.h>
 	"CL_schlagwort.hpp"
 
-1565269354 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
+1565339165 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
 	"CL_todo.hpp"
 
