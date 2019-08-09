@@ -3,3 +3,5 @@
 *.exe
 *.cbp
 *.layout
+*.depend
+ToDo/ToDo.depend

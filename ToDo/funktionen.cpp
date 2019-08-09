@@ -14,11 +14,11 @@
 
 #include "CL_schlagwort.hpp"
 #include "CL_aufgabe.hpp"
-
+#include "CL_todo.hpp"
 
 #include <stdio.h>
 #include "header.hpp"
-#include "CL_todo.hpp"
+
 
 /// extern in der header.hpp funktioniert nicht
 std::string my_tag = "";
@@ -55,9 +55,6 @@ int init(int argc, char **argv)
             std::cout << "nur prog.exe in Windows aufgerufen" << std::endl;
         #else           /// Hier kommt nachher der Aufruf für die Gui rein
             std::cout << "nur prog in Linux aufgerufen" << std::endl;
-                CL_aufgabe test;
-                test.echo(5);
-
         #endif // WINDOWS
         return 0;
     }

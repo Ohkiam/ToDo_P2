@@ -7,7 +7,7 @@
 #ifndef _CL_AUFGABE_H_
 #define _CL_AUFGABE_H_
 
-class CL_aufgabe: public CL_todo{
+class CL_aufgabe: /*virtual*/ public CL_todo{   /** virtual aus dem Grund, damit die CL_init keine Probleme mit der Mehrfachvererbung bekommt wenn auf CL_todo zugegriffen werden soll */
 private:
     /** Was habe ich an Variablen und Methoden hier */
 

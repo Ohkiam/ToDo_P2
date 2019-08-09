@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1565265102 source:e:\codeblocks_repo\todo_p2\todo\main.cpp
+1565352461 source:e:\codeblocks_repo\todo_p2\todo\main.cpp
 	<stdio.h>
 	"header.hpp"
 	<stdio.h>
 	"header.hpp"
+	"CL_init.hpp"
 
-1565340848 source:e:\codeblocks_repo\todo_p2\todo\funktionen.cpp
+1565356124 source:e:\codeblocks_repo\todo_p2\todo\funktionen.cpp
 	"CL_schlagwort.hpp"
 	"CL_aufgabe.hpp"
+	"CL_todo.hpp"
 	<stdio.h>
 	"header.hpp"
-	"CL_todo.hpp"
 
 1565334395 e:\codeblocks_repo\todo_p2\todo\header.hpp
 	<iostream>
@@ -31,13 +32,27 @@
 	<stdio.h>
 	"CL_aufgabe.hpp"
 
-1565338603 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
+1565354594 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
 	"CL_todo.hpp"
 
 1565268483 source:e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.cpp
 	<stdio.h>
 	"CL_schlagwort.hpp"
 
-1565339165 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
+1565354641 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
 	"CL_todo.hpp"
+
+1565354450 source:e:\codeblocks_repo\todo_p2\todo\cl_init.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstring>
+	<cstdio>
+	<fstream>
+	<stdio.h>
+	"CL_init.hpp"
+
+1565354867 e:\codeblocks_repo\todo_p2\todo\cl_init.hpp
+	"CL_aufgabe.hpp"
+	"CL_schlagwort.hpp"
 
