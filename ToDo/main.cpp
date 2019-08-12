@@ -21,7 +21,7 @@
 
 /** Klassen */
 #include <stdio.h>
-#include "header.hpp"
+//#include "header.hpp"
 #include "CL_init.hpp"
 
 /** Schalter für Windows/Linux */

@@ -11,6 +11,7 @@ class CL_aufgabe: /*virtual*/ public CL_todo{   /** virtual aus dem Grund, damit
 private:
     /** Was habe ich an Variablen und Methoden hier */
 
+
 public:
     /** was muss ich sichtbar deklarieren */
     CL_aufgabe();     /// konstruktor

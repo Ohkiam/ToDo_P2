@@ -7,7 +7,7 @@
 #include <fstream>
 #include <stdio.h>
 #include "CL_init.hpp"
-
+#include "CL_userinfo.hpp"
 
 CL_init::CL_init()     /// konstruktor
 {
@@ -28,17 +28,20 @@ CL_init::~CL_init()
 * @error :
 * @return: string
 */
-void CL_init::command_help(){
-    std::cout <<    "\n Hilfe new \n"
-                    "      tag | Schlagwort erstellen \n"
-                    "     todo | Aufgabe erstellen \n"
-                    " list_tag | Sclagwoerter anzeigen \n"
-                    "list_todo | Aufgaben anzeigen" << std::endl;
-    return;
-}
+
 
 void CL_init::init(int argc, char **argv)
 {
+    CL_todo todo;
+    if(todo.exist_file() == false){
+        std::cout << "false beim Testen ob die Dateien existieren" << std::endl;
+        if(todo.exist_file()){
+            std::cout << "Dateien wurden erstellt" << std::endl;
+        }else{
+            std::cout << "Dateien konnten nicht erstellt werden" << std::endl;
+        }
+    }
+
     if(argc < 2){
         #ifdef WINDOWS  /// Hier kommt nachher der Aufruf für die Gui rein
             std::cout << "nur prog.exe in Windows aufgerufen" << std::endl;
@@ -46,17 +49,19 @@ void CL_init::init(int argc, char **argv)
             std::cout << "nur prog in Linux aufgerufen" << std::endl;
         #endif // WINDOWS
     }
+    CL_userinfo user;
     int i;
     for(i=0; i<argc; i++)
 	{
         // hier werden die Strings verglichen mit !strcmp
 		// wichtig ist das sring.h eingebunden wird
-        if(!strcmp( argv[i], "todo.exe" )){
+        if(!strcmp( argv[i], "ToDo.exe" )){
                 //CL_aufgabe test;
                 //test.echo(5);
         }else if(!strcmp( argv[i], "help" )){
             //command_help();
-            command_help();
+            std::cout << user.command_help() << std::endl;
+
         }else if(!strcmp( argv[i], "tag" )){
             //command_tag();
 
@@ -70,8 +75,9 @@ void CL_init::init(int argc, char **argv)
             //command_list_todo();
 
         }else{
-            //s = argv[i];
-            //comand_err();
+
+            std::cout << user.comand_err(argv[i]) << std::endl;
+
 
         }
 

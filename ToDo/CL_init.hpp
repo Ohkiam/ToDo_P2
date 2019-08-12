@@ -15,7 +15,6 @@ public:
     /** was muss ich sichtbar deklarieren */
     CL_init();     /// konstruktor
     ~CL_init();
-    void command_help();
     void init(int argc, char **argv);
 };
 #endif // _CL_INIT_H_
