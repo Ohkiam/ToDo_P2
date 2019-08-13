@@ -10,11 +10,11 @@ class CL_userinfo{
 private:
     /** Was habe ich an Variablen und Methoden hier */
     ///std::string s;  /** Ist das so richtig das ein Übergabeparameter hier deklariert wird? oder kann es bleiben das es in der comand_err deklariert wird */
-    std::string help = "\n Hilfe new \n"
-                    "      tag | Schlagwort erstellen \n"
-                    "     todo | Aufgabe erstellen \n"
-                    " list_tag | Sclagwoerter anzeigen \n"
-                    "list_todo | Aufgaben anzeigen";
+    std::string help = "\n  Hilfe: \n"
+                    "\n \t       tag | Schlagwort erstellen \n"
+                    "\n \t      todo | Aufgabe erstellen \n"
+                    "\n \t  list_tag | Sclagwoerter anzeigen \n"
+                    "\n \t list_todo | Aufgaben anzeigen";
 
 
 public:
@@ -26,3 +26,5 @@ public:
 
 };
 #endif // _CL_INIT_H_
+
+

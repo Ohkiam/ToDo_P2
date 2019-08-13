@@ -10,7 +10,7 @@
 
 
 
-//std::string s = "";
+
 
 
 
@@ -34,8 +34,7 @@ CL_userinfo::~CL_userinfo()
 * @return: string
 */
 std::string CL_userinfo::command_help(){
-    //std::cout << help << std::endl;
-    return(help) ;
+    return help ;
 }
 /**
 * @description : Meldung das der eingegebene Befehl nicht existiert
@@ -49,12 +48,6 @@ std::string CL_userinfo::command_help(){
 * @return:
 */
 std::string CL_userinfo::comand_err(std::string s){
-
-    //std::string test;
-    //test = s;
-    //test += " ist als Befehl nicht vorhanden";
-
-    //std::cout << "Sorry!, ich weiss nicht was du willst. Den Befehl "<< s <<" kenne ich nicht" << std::endl;
     return (s += " ist als Befehl nicht vorhanden");
 }
 
