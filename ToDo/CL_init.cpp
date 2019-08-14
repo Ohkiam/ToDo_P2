@@ -8,6 +8,12 @@
 #include <stdio.h>
 #include "CL_init.hpp"
 #include "CL_userinfo.hpp"
+#include "CL_ausnahmefallbehandlung.hpp"
+
+
+/** Schalter für Windows/Linux */
+//#undef WINDOWS
+#define WINDOWS
 
 CL_init::CL_init()     /// konstruktor
 {
@@ -30,6 +36,10 @@ CL_init::~CL_init()
 */
 void CL_init::init(int argc, char **argv)
 {
+    try
+	{
+
+
     /**
     * @description : Schleife zum Auslesen der übergebenen Parameter beim
     *                Programmaufruf und aufruf der entsprechenden Funktionen
@@ -135,6 +145,26 @@ void CL_init::init(int argc, char **argv)
         }
 
     }
+
+
+
+	}
+	catch(CL_ausnahmefallbehandlung a)
+	{
+		switch(a.get_grund())
+		{
+			case AUSNAHME_1:
+				std::cout << "Eingabe Fehlgeschlagen." << std::endl;
+				break;
+			case AUSNAHME_2:
+				std::cout << "Kein gueltiger Eingabewert." << std::endl;
+				break;
+		}
+	}
+
+
+
+
 }
 
 

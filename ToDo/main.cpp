@@ -24,10 +24,7 @@
 //#include "header.hpp"
 #include "CL_init.hpp"
 
-/** Schalter für Windows/Linux */
-/// Von hier aus funktioniert es nicht, muss anscheinend in die header.hpp
-//#undef WINDOWS
-#define WINDOWS
+
 
 
 

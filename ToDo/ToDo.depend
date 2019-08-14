@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1565592105 source:e:\codeblocks_repo\todo_p2\todo\main.cpp
+1565781667 source:e:\codeblocks_repo\todo_p2\todo\main.cpp
 	<stdio.h>
 	"header.hpp"
 	<stdio.h>
@@ -12,12 +12,9 @@
 	<stdio.h>
 	"header.hpp"
 
-1565679258 e:\codeblocks_repo\todo_p2\todo\header.hpp
+1565782945 e:\codeblocks_repo\todo_p2\todo\header.hpp
 	<iostream>
 	<string>
-	<cstdlib>
-	<cstring>
-	<cstdio>
 	<fstream>
 	"CL_todo.hpp"
 
@@ -27,27 +24,30 @@
 	<fstream>
 	"CL_todo.hpp"
 
-1565693918 e:\codeblocks_repo\todo_p2\todo\cl_todo.hpp
+1565781782 e:\codeblocks_repo\todo_p2\todo\cl_todo.hpp
 	<iostream>
 
-1565702717 source:e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.cpp
+1565784859 source:e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.cpp
 	<stdio.h>
+	<iostream>
 	"CL_aufgabe.hpp"
 	"CL_schlagwort.hpp"
+	"CL_ausnahmefallbehandlung.hpp"
 	"header.hpp"
 
 1565702717 e:\codeblocks_repo\todo_p2\todo\cl_aufgabe.hpp
 	"CL_todo.hpp"
 
-1565702280 source:e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.cpp
+1565784948 source:e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.cpp
 	<stdio.h>
 	"CL_schlagwort.hpp"
+	"CL_ausnahmefallbehandlung.hpp"
 	"header.hpp"
 
 1565700982 e:\codeblocks_repo\todo_p2\todo\cl_schlagwort.hpp
 	"CL_todo.hpp"
 
-1565702404 source:e:\codeblocks_repo\todo_p2\todo\cl_init.cpp
+1565784706 source:e:\codeblocks_repo\todo_p2\todo\cl_init.cpp
 	<iostream>
 	<string>
 	<cstdlib>
@@ -57,6 +57,7 @@
 	<stdio.h>
 	"CL_init.hpp"
 	"CL_userinfo.hpp"
+	"CL_ausnahmefallbehandlung.hpp"
 
 1565591165 e:\codeblocks_repo\todo_p2\todo\cl_init.hpp
 	"CL_aufgabe.hpp"
@@ -73,4 +74,17 @@
 	"CL_userinfo.hpp"
 
 1565699260 e:\codeblocks_repo\todo_p2\todo\cl_userinfo.hpp
+
+1565780988 source:e:\codeblocks_repo\todo_p2\todo\cl_ausnahmefallbehandlung.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstring>
+	<cstdio>
+	<fstream>
+	<stdio.h>
+	<exception>
+	"CL_ausnahmefallbehandlung.hpp"
+
+1565781600 e:\codeblocks_repo\todo_p2\todo\cl_ausnahmefallbehandlung.hpp
 

@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include "CL_schlagwort.hpp"
-
+#include "CL_ausnahmefallbehandlung.hpp"
 #include "header.hpp"
 
 CL_schlagwort::CL_schlagwort()     /// konstruktor
@@ -16,6 +16,9 @@ CL_schlagwort::~CL_schlagwort()
 std::string CL_schlagwort::create_string_tag(){
     std::cout << "\n \tSchlagwort ?" << std::endl;
 	getline(std::cin, my_tag_tmp);
+	if(std::cin.fail()){
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+	}
     return my_tag_tmp;
 }
 /**
@@ -36,6 +39,9 @@ void CL_schlagwort::command_tag(){
     CL_todo todo;
     std::cout << "\n \tSchlagwort erstellen: " << std::endl;
     getline(std::cin, my_tag_tmp);
+    if(std::cin.fail()){
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+    }
     if(my_tag_tmp.length() == 0){
         std::cout << "\n \tWurde was eingegeben?" << std::endl;
     }else if(my_tag_tmp.length() < 3){

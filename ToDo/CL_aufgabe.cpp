@@ -1,8 +1,11 @@
 /** Klasse CL_aufgabe  */
 
 #include <stdio.h>
+#include <iostream>
+
 #include "CL_aufgabe.hpp"
 #include "CL_schlagwort.hpp"
+#include "CL_ausnahmefallbehandlung.hpp"
 #include "header.hpp"
 
 
@@ -17,6 +20,9 @@ CL_aufgabe::~CL_aufgabe()
 std::string CL_aufgabe::create_string_todo(){
     std::cout << "Aufgabe erstellen" << std::endl;
 	getline(std::cin, my_todo_tmp);
+	if(std::cin.fail())		{
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+    }
 	return my_todo_tmp;
 }
 
@@ -54,6 +60,9 @@ void CL_aufgabe::command_todo(){
                   << "\nJa (j) /Nein (n): " << std::endl;
         //std::string j_n = "";
         std::cin >> j_n;
+        if(std::cin.fail())		{
+			throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+		}
         if(j_n == "n"){
             //command_tag();
             todo.set_tag(schlagwort.create_string_tag());
@@ -70,10 +79,12 @@ void CL_aufgabe::command_todo(){
             }else{
                 todo.write_file_todo();
             }
-        }else{
+        }else if(j_n == "j"){
             //write_file(my_todo);
             todo.write_file_tag();
             todo.write_file_todo();
+        }else if(j_n == ""){
+             throw CL_ausnahmefallbehandlung(AUSNAHME_2);	// * Selbstdefinierter Rueckgabewert
         }
 	}else{
 	    todo.write_file_todo();
@@ -103,7 +114,10 @@ void CL_aufgabe::command_list_todo(){
     std::cout << "Wollen Sie sich die Schlagwoerter anzeigen lassen? "
               << "\nJa (j) /Nein (n): " << std::endl;
     std::cin >> j_n;
-    CL_todo todo;                                                           /// Kontrollstrucktur schaffen ob Die Dateien leer sind
+    CL_todo todo;
+    if(std::cin.fail()){
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+    }                                                         /// Kontrollstrucktur schaffen ob Die Dateien leer sind
     if(j_n == "j"){
         CL_schlagwort schlagwort;
         schlagwort.command_list_tag();
@@ -125,7 +139,7 @@ void CL_aufgabe::command_list_todo(){
 
         }
         f.close();                // Datei wieder schlieﬂen
-    }else{
+    }else if(j_n == "n"){
         //std::cout << "Sie haben nein gewaehlt" << std::endl;
         f.open(todo.get_todo_file(), std::fstream::in); // ÷ffne Datei aus Parameter
         while (!f.eof())          // Solange noch Daten vorliegen
@@ -134,5 +148,7 @@ void CL_aufgabe::command_list_todo(){
             std::cout << "\n \t" << counter++ << ". " << s << "\n" << std::endl;
         }
         f.close();                // Datei wieder schlieﬂen
+    }else{
+        throw CL_ausnahmefallbehandlung(AUSNAHME_2);	// * Selbstdefinierter Rueckgabewert
     }
 }
