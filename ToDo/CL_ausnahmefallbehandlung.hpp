@@ -12,7 +12,7 @@
 #ifndef _CL_AUSNAHMEFALLBEHANDLUNG_H_
 #define _CL_AUSNAHMEFALLBEHANDLUNG_H_
 
-class CL_ausnahmefallbehandlung //: exception
+class CL_ausnahmefallbehandlung : public std::exception
 {
 private:
     int grund;

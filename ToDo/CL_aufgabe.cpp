@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 #include <iostream>
-
+#include <fstream>
 #include "CL_aufgabe.hpp"
 #include "CL_schlagwort.hpp"
 #include "CL_ausnahmefallbehandlung.hpp"
-#include "header.hpp"
+
 
 
 CL_aufgabe::CL_aufgabe()     /// konstruktor

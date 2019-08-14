@@ -1,9 +1,10 @@
 /** Klasse CL_schlagwort  */
 
 #include <stdio.h>
+#include <fstream>
 #include "CL_schlagwort.hpp"
 #include "CL_ausnahmefallbehandlung.hpp"
-#include "header.hpp"
+
 
 CL_schlagwort::CL_schlagwort()     /// konstruktor
 {

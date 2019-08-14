@@ -1,10 +1,5 @@
 /** Klasse CL_userinfo  */
 #include <iostream>
-#include <string>
-#include <cstdlib>
-#include <cstring>
-#include <cstdio>
-#include <fstream>
 #include <stdio.h>
 #include "CL_userinfo.hpp"
 

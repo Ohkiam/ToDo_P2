@@ -1,10 +1,6 @@
 /** Klasse CL_init  */
 #include <iostream>
-#include <string>
-#include <cstdlib>
 #include <cstring>
-#include <cstdio>
-#include <fstream>
 #include <stdio.h>
 #include "CL_init.hpp"
 #include "CL_userinfo.hpp"
@@ -110,7 +106,7 @@ void CL_init::init(int argc, char **argv)
 	{
         // hier werden die Strings verglichen mit !strcmp
 		// wichtig ist das sring.h eingebunden wird
-        if(!strcmp( argv[i], "ToDo.exe" )){
+        if(!strcmp( argv[i], "ToDo.exe" ) || !strcmp( argv[i], "todo.exe" )){
                 //CL_aufgabe test;
                 //test.echo(5);
         }else if(!strcmp( argv[i], "help" )){
