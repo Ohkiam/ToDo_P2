@@ -15,9 +15,9 @@ private:
 
 
 public:
-    /** was muss ich sichtbar deklarieren */
+    /** was muss ich sichtbar deklarieren ??? */
     CL_todo();     /// konstruktor
-    ~CL_todo();
+    ~CL_todo();    /// dekonstruktor
     bool exist_file();
     void set_tag(std::string _my_tag);
     void set_todo(std::string _my_todo);

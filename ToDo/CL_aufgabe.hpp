@@ -18,7 +18,7 @@ private:
 
 public:
     /** was muss ich sichtbar deklarieren */
-    CL_aufgabe();     /// konstruktor
+    CL_aufgabe();
     ~CL_aufgabe();
     std::string create_string_todo();
     void command_todo();

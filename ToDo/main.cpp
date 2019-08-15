@@ -17,19 +17,13 @@
 /** Bibliotheken */
 #include <stdio.h>
 
-
-
 /** Klassen */
 #include "CL_init.hpp"
-
-
-
-
 
 int main(int argc, char **argv)
 {
     CL_init init_now;
-    init_now.init(argc, argv);
+    init_now.init(argc, argv);  /// klasse CL_init , methode init
 
 return 0;
 }

@@ -17,6 +17,18 @@ CL_aufgabe::~CL_aufgabe()
 {
 
 }
+/**
+* @description : erstellen geines strings mit der Aufgabe
+*
+* @param :
+*
+* @todo : Fortgeschritten -> das DoDo als zweiter Parameter
+*         eingeben und verarbeiten lassen
+*
+* @throws : AUSNAHME_1
+*
+* @return: std::string
+*/
 std::string CL_aufgabe::create_string_todo(){
     std::cout << "Aufgabe erstellen" << std::endl;
 	getline(std::cin, my_todo_tmp);
@@ -29,31 +41,32 @@ std::string CL_aufgabe::create_string_todo(){
 
 
 /**
-* @description : ToDos erstellen und in einer datei schreiben lasen
+* @description : Verarbeitung des Befehles todo
 *
 * @param :
-*
-* @todo :
 *
 * @todo : Fortgeschritten -> das DoDo als zweiter Parameter
 *         eingeben und verarbeiten lassen
 *
-* @throws :
-* @error :
-* @return:
+* @throws : AUSNAHME_1 und AUSNAHME_2
+*
+* @return: nix
 */
 void CL_aufgabe::command_todo(){
+    /** Objekte erstellen */
     CL_todo todo;
     CL_schlagwort schlagwort;
+    /** string erstellen mit der Aufgabe */
+	todo.set_todo(create_string_todo());            /// CL_todo -> set_todo(    CL_aufgabe -> create_string_todo()  )
+    /** string erstellen mit dem Schlagwort */
+	todo.set_tag(schlagwort.create_string_tag());   /// CL_todo -> set_tag(    CL_schlagwort -> create_string_tag()  )
 
-	todo.set_todo(create_string_todo());
-
-	todo.set_tag(schlagwort.create_string_tag());
 
 
+	#if 1 /// Wegen Zeitmangel nicht geschafft alles in eine Schleife zu Packen, Vielleicht habe ich morgen noch zeit dazu
 
-	#if 1
-	if(schlagwort.check_tag(todo.get_tag(), todo.get_tag_file()) == false){
+	/** Überprüfen ob Schlagwort existiert */
+	if(schlagwort.check_tag(todo.get_tag(), todo.get_tag_file()) == false){     /// CL_schlagwort -> check_tag(    CL_todo -> get_tag() und  get_tag_file()
         /** tag existiert nicht also tag anlegen oder anderen tag eingeben */
         std::cout << todo.get_tag() << " existiert nicht" << std::endl;
         std::cout << "Wollen Sie dieses Schlagwort erstellen? "
@@ -61,33 +74,35 @@ void CL_aufgabe::command_todo(){
         //std::string j_n = "";
         std::cin >> j_n;
         if(std::cin.fail())		{
-			throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+			throw CL_ausnahmefallbehandlung(AUSNAHME_1);	///* Selbstdefinierter Rückgabewert
 		}
         if(j_n == "n"){
-            //command_tag();
+            /** neuen string erstellen mit dem Schlagwort */
             todo.set_tag(schlagwort.create_string_tag());
-            if(schlagwort.check_tag(todo.get_tag(), todo.get_tag_file()) == false){
+            /** Überprüfen ob Schlagwort existiert */
+            if(schlagwort.check_tag(todo.get_tag(), todo.get_tag_file()) == false){     /// CL_schlagwort -> check_tag(    CL_todo -> get_tag() und  get_tag_file()
                 std::cout << "letzte Moeglichkeit das Schlagwort zu bestimmen!" << std::endl;
+                /** Letzte Überprüfung */
                 todo.set_tag(schlagwort.create_string_tag());
                 if(schlagwort.check_tag(todo.get_tag(), todo.get_tag_file()) == false){
-                    std::cout << todo.get_tag() << " existiert nicht" << std::endl;                 /// Fehlerbehandlung Abbruch wegen falscher eingabe einbauen
-                    /// Hier kommt ein Trow hin
+                    std::cout << todo.get_tag() << " existiert nicht" << std::endl;                 /// Fehlerbehandlung ^^ , Programm geht nicht weiter hier
+                    /// Hier könnte ein Trow hin, muss aber nicht
                     std::cout << "Programm endet wegen wiederholter Falscheingabe des Schlagwortes" << std::endl;
                 }else{
-                    todo.write_file_todo();
+                    todo.write_file_todo(); /** todo in datei schreiben */
                 }
             }else{
-                todo.write_file_todo();
+                todo.write_file_todo(); /** todo in datei schreiben */
             }
         }else if(j_n == "j"){
             //write_file(my_todo);
-            todo.write_file_tag();
-            todo.write_file_todo();
+            todo.write_file_tag();  /** tag in datei schreiben */
+            todo.write_file_todo(); /** todo in datei schreiben */
         }else if(j_n == ""){
-             throw CL_ausnahmefallbehandlung(AUSNAHME_2);	// * Selbstdefinierter Rueckgabewert
+             throw CL_ausnahmefallbehandlung(AUSNAHME_2);	///* Selbstdefinierter Rückgabewert
         }
 	}else{
-	    todo.write_file_todo();
+	    todo.write_file_todo(); /** todo in datei schreiben */
 	}
 	#endif // 0
     return;
@@ -97,12 +112,12 @@ void CL_aufgabe::command_todo(){
 *
 * @param :
 *
-* @todo : in der Schleife funzt es noch nicht
+* @todo : Kontrollstrucktur schaffen ob Die Dateien leer sind , j_n Abfrage noch in eigene Methode verpacken
 *
 *
-* @throws :
+* @throws : AUSNAHME_1 , AUSNAHME_2
 * @error :
-* @return: strings
+* @return: nix
 */
 void CL_aufgabe::command_list_todo(){
 
