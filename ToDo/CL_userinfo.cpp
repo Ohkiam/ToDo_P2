@@ -4,11 +4,6 @@
 #include "CL_userinfo.hpp"
 
 
-
-
-
-
-
 CL_userinfo::CL_userinfo()     /// konstruktor
 {
 
@@ -26,7 +21,7 @@ CL_userinfo::~CL_userinfo()
 *
 * @throws :
 * @error :
-* @return: string
+* @return: std::string
 */
 std::string CL_userinfo::command_help(){
     return help ;
@@ -40,7 +35,7 @@ std::string CL_userinfo::command_help(){
 *
 * @throws :
 * @error :
-* @return:
+* @return: std::string
 */
 std::string CL_userinfo::comand_err(std::string s){
     return (s += " ist als Befehl nicht vorhanden");

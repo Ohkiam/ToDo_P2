@@ -17,6 +17,17 @@
 /// https://riptutorial.com/de/cplusplus/example/23640/benutzerdefinierte-ausnahme
 
 
+/**
+
+@Gisela
+
+Diese Klasse ist noch nicht fertig,
+Der Grund : Blicke da noch nicht so richtig durch was alles möglich ist!
+
+
+
+*/
+
 CL_ausnahmefallbehandlung::CL_ausnahmefallbehandlung(int _grund)
 {
 	grund = _grund;

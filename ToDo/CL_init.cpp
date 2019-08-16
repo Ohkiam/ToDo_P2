@@ -20,15 +20,15 @@ CL_init::~CL_init()
 
 }
 /**
-* @description : Anzeigen welche Befehle es gibt
+* @description : Programmstart
 *
-* @param : keine
+* @param : int argc, char **argv
 *
-* @todo :
+* @todo : alle 3 Funktionen in 3 Methoden verwandeln (verbleiben in dieser Klasse)
 *
-* @throws :
-* @error :
-* @return: string
+* @throws : hier catch aller Throws
+*
+* @return: nix
 */
 void CL_init::init(int argc, char **argv)
 {
@@ -37,17 +37,10 @@ void CL_init::init(int argc, char **argv)
 
 
     /**
-    * @description : Schleife zum Auslesen der übergebenen Parameter beim
-    *                Programmaufruf und aufruf der entsprechenden Funktionen
+    * @description : Überprüfung ob die Files existieren
     *
-    * @param : argc, argv
+    * @todo : Diese Funktion muss noch augelagert werden,
     *
-    * @todo : Diese Funktion muss noch augelagert werden, Problem ist die
-    *         Übernahme der main Parameter (nochmal schlau machen ob es mit
-    *         casten geht)
-    *
-    * @throws :
-    * @error :
     * @return:
     */
     CL_todo todo;
@@ -65,17 +58,10 @@ void CL_init::init(int argc, char **argv)
 
 
     /**
-    * @description : Schleife zum Auslesen der übergebenen Parameter beim
-    *                Programmaufruf und aufruf der entsprechenden Funktionen
+    * @description : später hier aufruf der win oder linux gui
     *
-    * @param : argc, argv
+    * @todo : Diese Funktion muss noch augelagert werden
     *
-    * @todo : Diese Funktion muss noch augelagert werden, Problem ist die
-    *         Übernahme der main Parameter (nochmal schlau machen ob es mit
-    *         casten geht)
-    *
-    * @throws :
-    * @error :
     * @return:
     */
     if(argc < 2){
@@ -93,12 +79,8 @@ void CL_init::init(int argc, char **argv)
     *
     * @param : argc, argv
     *
-    * @todo : Diese Funktion muss noch augelagert werden, Problem ist die
-    *         Übernahme der main Parameter (nochmal schlau machen ob es mit
-    *         casten geht)
+    * @todo : Diese Funktion muss noch augelagert werden
     *
-    * @throws :
-    * @error :
     * @return:
     */
     int i;

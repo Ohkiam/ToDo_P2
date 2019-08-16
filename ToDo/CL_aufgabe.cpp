@@ -18,7 +18,7 @@ CL_aufgabe::~CL_aufgabe()
 
 }
 /**
-* @description : erstellen geines strings mit der Aufgabe
+* @description : erstellen strings mit der Aufgabe
 *
 * @param :
 *
@@ -131,7 +131,7 @@ void CL_aufgabe::command_list_todo(){
     std::cin >> j_n;
     CL_todo todo;
     if(std::cin.fail()){
-        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	///* Selbstdefinierter Rückgabewert
     }                                                         /// Kontrollstrucktur schaffen ob Die Dateien leer sind
     if(j_n == "j"){
         CL_schlagwort schlagwort;
@@ -164,6 +164,6 @@ void CL_aufgabe::command_list_todo(){
         }
         f.close();                // Datei wieder schließen
     }else{
-        throw CL_ausnahmefallbehandlung(AUSNAHME_2);	// * Selbstdefinierter Rueckgabewert
+        throw CL_ausnahmefallbehandlung(AUSNAHME_2);	///* Selbstdefinierter Rückgabewert
     }
 }

@@ -6,7 +6,7 @@
 #include "CL_ausnahmefallbehandlung.hpp"
 
 
-CL_schlagwort::CL_schlagwort()     /// konstruktor
+CL_schlagwort::CL_schlagwort()
 {
 
 }
@@ -14,11 +14,23 @@ CL_schlagwort::~CL_schlagwort()
 {
 
 }
+/**
+* @description : erstellen strings mit dem Schlagwort
+*
+* @param :
+*
+* @todo : Fortgeschritten -> das Schlagwort als zweiter Parameter
+*         eingeben und verarbeiten lassen
+*
+* @throws : AUSNAHME_1
+*
+* @return: std::string
+*/
 std::string CL_schlagwort::create_string_tag(){
     std::cout << "\n \tSchlagwort ?" << std::endl;
 	getline(std::cin, my_tag_tmp);
 	if(std::cin.fail()){
-        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	///* Selbstdefinierter Rückgabewert
 	}
     return my_tag_tmp;
 }
@@ -27,21 +39,18 @@ std::string CL_schlagwort::create_string_tag(){
 *
 * @param :
 *
-* @todo :
-*
-*
 * @todo : Fortgeschritten -> das Schlagwort als zweiter Parameter eingeben
 *         und verarbeiten lassen
-* @throws :
-* @error :
-* @return: string
+* @throws : AUSNAHME_1
+*
+* @return: nix
 */
 void CL_schlagwort::command_tag(){
     CL_todo todo;
     std::cout << "\n \tSchlagwort erstellen: " << std::endl;
     getline(std::cin, my_tag_tmp);
     if(std::cin.fail()){
-        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	// * Selbstdefinierter Rueckgabewert
+        throw CL_ausnahmefallbehandlung(AUSNAHME_1);	///* Selbstdefinierter Rückgabewert
     }
     if(my_tag_tmp.length() == 0){
         std::cout << "\n \tWurde was eingegeben?" << std::endl;
@@ -58,14 +67,9 @@ void CL_schlagwort::command_tag(){
 /**
 * @description : Auflisten aller Schlagwörter (tags)
 *
-* @param :
-*
 * @todo :
 *
-*
-* @throws :
-* @error :
-* @return: strings
+* @return: nix
 */
 void CL_schlagwort::command_list_tag(){
     std::cout << "\n \tgespeicherte Schlagwoerter: " << std::endl;
@@ -81,21 +85,15 @@ void CL_schlagwort::command_list_tag(){
     return;
 }
 /**
-* @description : Prüfen ob das tag schon existiert, wenn nicht abfrage ob es
-*                erstellt werden soll
+* @description : Prüfung ob das Schlagwort existiert
 *
-* @param :
+* @param : std::string _my_tag, std::string tagfile
 *
 * @todo :
 *
-*
-* @throws :
-* @error :
-* @return: strings
+* @return: bool
 */
 bool CL_schlagwort::check_tag(std::string _my_tag, std::string tagfile){
-    /// Prüfung ob das Schlagwort existiert,
-    /// wenn nicht Schlagwort erstellen (mit Rückfrage)
     bool is_found = false;
     std::ifstream f;
     f.open(tagfile, std::fstream::in); // Öffne Datei aus Parameter

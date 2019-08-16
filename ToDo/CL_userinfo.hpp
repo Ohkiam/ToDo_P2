@@ -9,7 +9,6 @@
 class CL_userinfo{
 private:
     /** Was habe ich an Variablen und Methoden hier */
-    ///std::string s;  /** Ist das so richtig das ein Übergabeparameter hier deklariert wird? oder kann es bleiben das es in der comand_err deklariert wird */
     std::string help = "\n  Hilfe: \n"
                     "\n \t       tag | Schlagwort erstellen \n"
                     "\n \t      todo | Aufgabe erstellen \n"
@@ -19,7 +18,7 @@ private:
 
 public:
     /** was muss ich sichtbar deklarieren */
-    CL_userinfo();     /// konstruktor
+    CL_userinfo();
     ~CL_userinfo();
     std::string command_help();
     std::string comand_err(std::string s);
